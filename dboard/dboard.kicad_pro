@@ -426,7 +426,7 @@
       "idf": "",
       "netlist": "",
       "specctra_dsn": "",
-      "step": "../../../frame/projects/tkl/dboard-v2.step",
+      "step": "D:/kbd/frame/projects/tkl/dboard-v2.1.step",
       "vrml": ""
     },
     "page_layout_descr_file": ""
@@ -462,7 +462,7 @@
   },
   "sheets": [
     [
-      "b9d1615f-15d3-4e4a-b697-23bfd03b3f35",
+      "1c2a4003-f28e-4522-82cb-68f910bff7be",
       ""
     ]
   ],

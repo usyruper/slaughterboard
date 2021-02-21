@@ -1441,13 +1441,6 @@
       (effects (font (size 1.27 1.27)) hide)
     )
   )
-  (global_label "USBGND" (shape input) (at 104.14 41.91 0)
-    (effects (font (size 1.27 1.27)) (justify left))
-    (uuid eb273472-05c6-419f-9935-3d751c37682e)
-    (property "Intersheet References" "${INTERSHEET_REFS}" (id 0) (at 115.7576 41.8306 0)
-      (effects (font (size 1.27 1.27)) (justify left) hide)
-    )
-  )
   (global_label "D-" (shape input) (at 106.68 52.07 0)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid ab0c66a6-fdeb-4fac-8834-c65039274cdf)
@@ -1633,7 +1626,7 @@
   (symbol (lib_id "power:GND") (at 31.75 93.98 270) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid ef08f82e-b749-4da4-83a9-de2b4476ed58)
-    (property "Reference" "#PWR?" (id 0) (at 25.4 93.98 0)
+    (property "Reference" "#PWR0109" (id 0) (at 25.4 93.98 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 27.3558 94.107 0))
@@ -1680,10 +1673,26 @@
     (pin "1" (uuid 25cf4b27-c956-45dd-822b-722d5494532d))
   )
 
+  (symbol (lib_id "power:GND") (at 104.14 41.91 90) (unit 1)
+    (in_bom yes) (on_board yes)
+    (uuid e8187c27-f36a-47a1-bf77-83c40a191fdb)
+    (property "Reference" "#PWR0110" (id 0) (at 110.49 41.91 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (id 1) (at 108.5342 41.783 0))
+    (property "Footprint" "" (id 2) (at 104.14 41.91 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (id 3) (at 104.14 41.91 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid f8d7bb7b-fcdb-4817-a5ea-dc164eaf02c0))
+  )
+
   (symbol (lib_id "power:GND") (at 104.14 69.85 90) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 83dc772f-c7be-4e82-8ec5-069f2c2b694e)
-    (property "Reference" "#PWR?" (id 0) (at 110.49 69.85 0)
+    (property "Reference" "#PWR0104" (id 0) (at 110.49 69.85 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Value" "GND" (id 1) (at 108.5342 69.723 0))
@@ -2017,7 +2026,7 @@
   (symbol (lib_id "Connector_Generic:Conn_01x04") (at 172.72 44.45 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-00005fec6f34)
-    (property "Reference" "J1" (id 0) (at 174.752 44.6532 0)
+    (property "Reference" "J2" (id 0) (at 174.752 44.653 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Value" "Conn_01x04" (id 1) (at 174.752 46.9646 0)
@@ -2057,7 +2066,7 @@
   (symbol (lib_id "dboard-rescue:HRO-TYPE-C-31-M-12-Type-C") (at 101.6 55.88 0) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 00000000-0000-0000-0000-00005feaf32e)
-    (property "Reference" "USB1" (id 0) (at 83.82 55.88 90)
+    (property "Reference" "J1" (id 0) (at 83.82 55.88 90)
       (effects (font (size 1.524 1.524)))
     )
     (property "Value" "HRO-TYPE-C-31-M-12" (id 1) (at 86.36 55.88 90)
@@ -2161,6 +2170,9 @@
     (path "/dbc25e60-73f1-4d71-870e-e081863af4ad"
       (reference "#PWR0103") (unit 1) (value "VBUS") (footprint "")
     )
+    (path "/83dc772f-c7be-4e82-8ec5-069f2c2b694e"
+      (reference "#PWR0104") (unit 1) (value "GND") (footprint "")
+    )
     (path "/58a02a79-1437-4bcc-841d-578eb3577028"
       (reference "#PWR0105") (unit 1) (value "+5V") (footprint "")
     )
@@ -2173,11 +2185,11 @@
     (path "/877abe91-8a1a-47a6-a5eb-28527c65371d"
       (reference "#PWR0108") (unit 1) (value "GND") (footprint "")
     )
-    (path "/83dc772f-c7be-4e82-8ec5-069f2c2b694e"
-      (reference "#PWR?") (unit 1) (value "GND") (footprint "")
-    )
     (path "/ef08f82e-b749-4da4-83a9-de2b4476ed58"
-      (reference "#PWR?") (unit 1) (value "GND") (footprint "")
+      (reference "#PWR0109") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/e8187c27-f36a-47a1-bf77-83c40a191fdb"
+      (reference "#PWR0110") (unit 1) (value "GND") (footprint "")
     )
     (path "/27d80559-e4cf-41a9-911c-b2c54794fb86"
       (reference "C1") (unit 1) (value "1u") (footprint "Capacitor_SMD:C_0402_1005Metric")
@@ -2206,8 +2218,11 @@
     (path "/00000000-0000-0000-0000-00005feb1045"
       (reference "H2") (unit 1) (value "MountingHole_Pad") (footprint "crokto:M3_Via_Hole")
     )
+    (path "/00000000-0000-0000-0000-00005feaf32e"
+      (reference "J1") (unit 1) (value "HRO-TYPE-C-31-M-12") (footprint "Type-C:HRO-TYPE-C-31-M-12-Assembly")
+    )
     (path "/00000000-0000-0000-0000-00005fec6f34"
-      (reference "J1") (unit 1) (value "Conn_01x04") (footprint "crokto:JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal")
+      (reference "J2") (unit 1) (value "Conn_01x04") (footprint "crokto:JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal")
     )
     (path "/b456c4a2-2574-41d8-bfe0-074db91178da"
       (reference "L1") (unit 1) (value "L_Ferrite") (footprint "other:BEADC1005X55N")
@@ -2229,9 +2244,6 @@
     )
     (path "/9c8c5ff5-5427-444c-ad2f-6f7c5ca4ad89"
       (reference "U2") (unit 1) (value "XC6206P332MR") (footprint "Package_TO_SOT_SMD:SOT-23")
-    )
-    (path "/00000000-0000-0000-0000-00005feaf32e"
-      (reference "USB1") (unit 1) (value "HRO-TYPE-C-31-M-12") (footprint "Type-C:HRO-TYPE-C-31-M-12-Assembly")
     )
   )
 )
